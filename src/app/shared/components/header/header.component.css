@@ -1,0 +1,26 @@
+nav {
+  height: 85px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a {
+  font-size: 15px;
+  color: white;
+}
+
+.logotipo {
+  height: 60px;
+}
+
+.collapse .navbar-collapse {
+  border-radius: 15px;
+}
+
+.navbar-nav {
+  padding: 15px 15px 15px 15px;
+}
+
+.nav-item {
+  padding-top: 10px;
+}
