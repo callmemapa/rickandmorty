@@ -1,0 +1,15 @@
+.card-title {
+  font-size: 18px;
+}
+
+.father {
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.card {
+  background-color: #E0E0E0;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}

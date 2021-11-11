@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from 'src/app/core/models/character.model';
 import { CharacterService } from 'src/app/core/services/character.service';
 
 @Component({
@@ -7,6 +8,9 @@ import { CharacterService } from 'src/app/core/services/character.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
+
+  characters: Character[] = [];
+  episodes: number[] = [];
 
   constructor(
     private characterService: CharacterService
@@ -19,8 +23,8 @@ export class CharactersComponent implements OnInit {
 
   fetchCharacters() {
     this.characterService.getCharacters()
-    .subscribe(data => {
-      console.log(data);
+    .subscribe((data: any) => {
+      this.characters = data.results;
     })
   }
 

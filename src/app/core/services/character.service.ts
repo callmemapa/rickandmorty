@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { Character } from './../models/character.model';
 import { environment } from './../../../environments/environment';
 
 @Injectable({
@@ -13,7 +14,11 @@ export class CharacterService {
   ) { }
 
   getCharacters() {
-    return this.http.get(`${environment.url_api}/character`);
+    return this.http.get<Character[]>(`${environment.url_api}/character`);
+  }
+
+  getCharacter(id: number) {
+    return this.http.get<Character>(`${environment.url_api}/character`);
   }
 
 }

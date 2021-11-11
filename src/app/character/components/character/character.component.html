@@ -1,1 +1,21 @@
-<p>character works!</p>
+<div class="container">
+  <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+    <div class="father">
+      <div class="card" style="width: 16rem;">
+        <img [src]="character.image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{character.name}}</h5>
+          <p class="card-text">{{character.species}} - {{character.status}} - {{character.gender}}</p>
+          <p>Episodes:
+            <span *ngFor="let item of character.episode">
+
+            </span>
+          </p>
+          <div class="text-center">
+            <a [routerLink]="['/characters', character.id]" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
