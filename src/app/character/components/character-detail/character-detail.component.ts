@@ -42,6 +42,9 @@ export class CharacterDetailComponent implements OnInit {
       })
   }
 
+  /** Se toma el último path de la URL la lista de episodios del personaje, ya que contiene el ID del episodio
+   * luego con este ID se puede hacer la consulta individual
+   */
   getEpisodes() {
     for (var i = 0; i < this.character.episode.length; i++) {
       this.episodes.push(this.character.episode[i].substring(this.character.episode[i].lastIndexOf('/') + 1));

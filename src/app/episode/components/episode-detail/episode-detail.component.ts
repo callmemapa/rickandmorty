@@ -39,6 +39,9 @@ export class EpisodeDetailComponent implements OnInit {
     })
   }
 
+  /** Se guarda el último trozo de la URL, que vendría siendo el id del personaje
+   * para que la consulta sea más sencilla al momento de redirigir a ese episodio en específico
+  */
   getCharacters() {
     for (var i = 0; i < this.episode.characters.length; i++) {
       this.characters.push(this.episode.characters[i].substring(this.episode.characters[i].lastIndexOf('/') + 1));
