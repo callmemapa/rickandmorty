@@ -2,5 +2,9 @@
   <div class="card-body">
     <h1>{{episode.name}}</h1>
     <p>{{episode.air_date}}</p>
+    <p>Characters ID:</p>
+    <div class="container-episodes">
+      <a *ngFor="let character of episode.characters; let i = index" [routerLink]="['/characters', character]">{{episode.characters[i]}} &nbsp;&nbsp;</a>
+    </div>
   </div>
 </div>

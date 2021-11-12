@@ -1,9 +1,12 @@
 .footer {
-  height: 50px;
-  display: flex;
-  align-items: center;
+  height: 60px;
 }
 
 p {
   color: white;
+  font-size: 18px;
+}
+
+.my-auto {
+  padding-top: 20px;
 }

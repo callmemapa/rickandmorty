@@ -10,8 +10,8 @@ import { CharacterService } from 'src/app/core/services/character.service';
 export class CharactersComponent implements OnInit {
 
   characters: Character[] = [];
-  episodes: number[] = [];
-  filterCharacter = 'Rick';
+  episodes: any[] = [];
+  filterCharacter = '';
 
   constructor(
     private characterService: CharacterService
@@ -25,7 +25,23 @@ export class CharactersComponent implements OnInit {
     this.characterService.getCharacters()
     .subscribe((data: any) => {
       this.characters = data.results;
+      this.getEpisodes();
+      this.updateEpisodes();
     })
+  }
+
+  getEpisodes() {
+    for (var i = 0; i < this.characters.length; i++) {
+      this.episodes.push(this.characters[i].episode);
+    }
+  }
+
+  updateEpisodes() {
+    for (var i = 0; i < this.episodes.length; i++) {
+      for (var j = 0; j < this.episodes[i].length; j++) {
+        this.episodes[i][j] = this.episodes[i][j].substring(this.episodes[i][j].lastIndexOf('/') + 1);
+      }
+    }
   }
 
 }

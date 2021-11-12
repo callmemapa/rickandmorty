@@ -14,6 +14,7 @@ export class EpisodeComponent implements OnInit {
     air_date: '',
     characters: []
   };
+  @Input() characters = [];
 
   constructor() { }
 

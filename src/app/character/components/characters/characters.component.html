@@ -11,6 +11,7 @@
     <app-character
       *ngFor="let character of characters | filter: filterCharacter"
       [character]="character">
+      [episodes]="episodes"
     </app-character>
   </div>
 </div>

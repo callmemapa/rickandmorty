@@ -4,14 +4,14 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <img [src]="character.image">
+      <img *ngIf="character.image !== ''" [src]="character.image">
     </div>
     <div class="col-12">
       <h2>Specie: {{character.species}}, Status: {{character.status}}, Gender: {{character.gender}}</h2>
     </div>
     <div class="col-12">
       <h2>List of episodes:</h2>
-      <a class="circle text-center" *ngFor="let episode of episodes" [routerLink]="['/episodes', episode]">{{episode}} &nbsp;&nbsp;</a>
+      <a class="text-center" *ngFor="let episode of episodes" [routerLink]="['/episodes', episode]">{{episode}} &nbsp;&nbsp;</a>
     </div>
   </div>
 </div>

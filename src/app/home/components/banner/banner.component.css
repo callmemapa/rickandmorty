@@ -3,7 +3,7 @@
 }
 
 .dj-banner {
-  position: relative;
+  position: flex;
 }
 
 .dj-banner .dj-bg {

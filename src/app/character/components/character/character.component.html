@@ -17,13 +17,12 @@
             </svg>
             {{character.status}} - {{character.species}} - {{character.gender}}
           </p>
-          <p>Episodes:
-            <span *ngFor="let item of character.episode">
-
-            </span>
-          </p>
+          <p>Chapter list:</p>
+          <div class="container-episodes">
+            <a *ngFor="let episode of character.episode" [routerLink]="['/episodes', episode]">{{episode}} &nbsp;&nbsp;</a>
+          </div>
           <div class="text-center">
-            <a [routerLink]="['/characters', character.id]" class="btn btn-info">More info</a>
+            <!-- <a [routerLink]="['/characters', character.id]" class="btn btn-info">More info</a> -->
           </div>
         </div>
       </div>

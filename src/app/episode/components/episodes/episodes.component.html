@@ -10,5 +10,6 @@
   <app-episode
         *ngFor="let episode of episodes | filter: filterEpisode"
         [episode]="episode">
+        [characters]="characters"
     </app-episode>
 </div>
