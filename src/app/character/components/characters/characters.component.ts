@@ -11,14 +11,14 @@ export class CharactersComponent implements OnInit {
 
   characters: Character[] = [];
   episodes: number[] = [];
+  filterCharacter = 'Rick';
 
   constructor(
     private characterService: CharacterService
-  ) {
-    this.fetchCharacters();
-  }
+  ) { }
 
   ngOnInit(): void {
+    this.fetchCharacters();
   }
 
   fetchCharacters() {

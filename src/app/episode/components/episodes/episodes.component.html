@@ -1,1 +1,14 @@
-<p>episodes works!</p>
+<div class="title text-center">
+  <h1>Rick and Morty Episodes</h1>
+</div>
+<div class="container">
+  <div class="form-group">
+    <input type="text" class="form-control" name="filterEpisode" placeholder="Search the episode..." [(ngModel)]="filterEpisode">
+  </div>
+</div>
+<div class="container container-char">
+  <app-episode
+        *ngFor="let episode of episodes | filter: filterEpisode"
+        [episode]="episode">
+    </app-episode>
+</div>

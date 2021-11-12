@@ -7,7 +7,8 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
 import { CharacterComponent } from './components/character/character.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { PipesModule  } from '../pipes/pipes.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule,
     CharacterRoutingModule,
-    RouterModule
+    RouterModule,
+    PipesModule,
+    FormsModule
   ]
 })
 export class CharacterModule { }

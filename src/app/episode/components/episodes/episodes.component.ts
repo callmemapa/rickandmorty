@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Episode } from 'src/app/core/models/episode.model';
+import { EpisodeService } from 'src/app/core/services/episode.service';
 
 @Component({
   selector: 'app-episodes',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EpisodesComponent implements OnInit {
 
-  constructor() { }
+  episodes: Episode[] = [];
+  filterEpisode = '';
+
+  constructor(
+    private episodeService: EpisodeService
+  ) { }
 
   ngOnInit(): void {
+    this.fetchEpisodes();
+  }
+
+  fetchEpisodes() {
+    this.episodeService.getEpisodes()
+    .subscribe((data: any) => {
+      this.episodes = data.results;
+      console.log(this.episodes);
+    })
   }
 
 }

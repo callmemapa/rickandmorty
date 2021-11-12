@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Episode } from 'src/app/core/models/episode.model';
 
 @Component({
   selector: 'app-episode',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./episode.component.css']
 })
 export class EpisodeComponent implements OnInit {
+
+  @Input() episode: Episode = {
+    id: 0,
+    name: '',
+    air_date: '',
+    characters: []
+  };
 
   constructor() { }
 

@@ -14,12 +14,13 @@ import { CoreModule } from './core/core.module';
 import { CharacterModule } from './character/character.module';
 import { EpisodeModule } from './episode/episode.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CharacterModule,
     EpisodeModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

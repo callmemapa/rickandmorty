@@ -18,7 +18,7 @@ export class CharacterService {
   }
 
   getCharacter(id: number) {
-    return this.http.get<Character>(`${environment.url_api}/character`);
+    return this.http.get<Character>(`${environment.url_api}/character/${id}`);
   }
 
 }

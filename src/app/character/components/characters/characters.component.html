@@ -2,9 +2,14 @@
   <h1>Rick and Morty Characters</h1>
 </div>
 <div class="container">
+  <div class="form-group">
+    <input type="text" class="form-control" name="filterCharacter" placeholder="Search the character..." [(ngModel)]="filterCharacter">
+  </div>
+</div>
+<div class="container container-char">
   <div class="row">
     <app-character
-      *ngFor="let character of characters"
+      *ngFor="let character of characters | filter: filterCharacter"
       [character]="character">
     </app-character>
   </div>

@@ -4,15 +4,26 @@
       <div class="card" style="width: 16rem;">
         <img [src]="character.image" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">{{character.name}}</h5>
-          <p class="card-text">{{character.species}} - {{character.status}} - {{character.gender}}</p>
+          <h5 class="card-title"><b>{{character.name}}</b></h5>
+          <p class="card-text">
+            <svg *ngIf="character.status === 'Alive'" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#41E920" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+            <svg *ngIf="character.status === 'Dead'" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#E92020" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+            <svg *ngIf="character.status === 'unknown'" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="gray" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <circle cx="8" cy="8" r="8"/>
+            </svg>
+            {{character.status}} - {{character.species}} - {{character.gender}}
+          </p>
           <p>Episodes:
             <span *ngFor="let item of character.episode">
 
             </span>
           </p>
           <div class="text-center">
-            <a [routerLink]="['/characters', character.id]" class="btn btn-primary">See more</a>
+            <a [routerLink]="['/characters', character.id]" class="btn btn-info">More info</a>
           </div>
         </div>
       </div>
