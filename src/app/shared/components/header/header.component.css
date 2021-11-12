@@ -27,4 +27,5 @@ a {
 
 .right {
   float: right;
+  z-index:2;
 }

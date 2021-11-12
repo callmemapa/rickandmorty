@@ -7,11 +7,18 @@
 }
 
 .dj-banner .dj-bg {
-  background-image: url(./../../../../assets/images/banner.png);
+  background-image: url(./../../../../assets/images/banner.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    visibility: hidden;
+  }
 }
 
 .dj-banner .dj-bg img {
@@ -22,6 +29,7 @@
 .dj-banner .dj-text {
   text-align: center;
   padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 @media screen and (min-width:768px) {
